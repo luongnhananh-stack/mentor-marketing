@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentor Lương Nhân Anh - Giải pháp bứt phá doanh số toàn diện và đồng hành 1-1 cho chủ thương hiệu bền vững.">
+    <meta name="keywords" content="mentor, marketing, doanh nghiệp, tư vấn, bán hàng">
+    <meta name="theme-color" content="#d4af37">
+    <title>Mentor Lương Nhân Anh - Giải Pháp Bứt Phá Doanh Số Doanh Nghiệp</title>
+    <style>
+        /* --- RESET & CẤU HÌNH CHUNG --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 3rem;
+            color: #111;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #d4af37;
+            margin: 1rem auto 0;
+        }
+        
+        /* --- NÚT KÊU GỌI HÀNH ĐỘNG (CTA) --- */
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37, #b8860b);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-size: clamp(0.95rem, 2vw, 1.2rem);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+        
+        .btn-cta:hover,
+        .btn-cta:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            outline: 2px solid transparent;
+        }
+        
+        .btn-cta:active {
+            transform: translateY(-1px);
+        }
+
+        /* --- 1. HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23222" width="1920" height="1080"/></svg>');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 6rem 0;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.8rem, 8vw, 3rem);
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .hero p:last-of-type {
+            color: #ccc;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            margin-bottom: 2rem;
+        }
+
+        /* --- 2. PAIN POINTS SECTION --- */
+        .pain-section {
+            background-color: #fff;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .pain-card {
+            background: #fff5f5;
+            border-left: 5px solid #ff4d4d;
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .pain-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .pain-card h3 {
+            color: #cc0000;
+            margin-bottom: 1rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+        }
+        
+        .pain-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .pain-quote {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+        }
+        
+        .pain-quote p {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        /* --- 3. SERVICES SECTION (4 CẤP ĐỘ) --- */
+        .services-section {
+            background-color: #f1f1f1;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-card {
+            background: #fff;
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid #eee;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+        
+        .service-card.featured {
+            border-color: #d4af37;
+            transform: scale(1.02);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card.featured:hover {
+            transform: scale(1.02) translateY(-8px);
+        }
+        
+        .service-card h3 {
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            color: #111;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .service-price {
+            font-size: clamp(1.4rem, 3vw, 1.6rem);
+            color: #b8860b;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        
+        .service-card ul {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .service-card ul li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* --- 4. FEEDBACK SECTION --- */
+        .feedback-section {
+            background: #fff;
+        }
+        
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .feedback-card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feedback-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+        }
+        
+        .feedback-card::before {
+            content: """;
+            font-size: 3rem;
+            color: #e0e0e0;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .feedback-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .feedback-author {
+            font-weight: 600;
+            color: #d4af37;
+            text-align: right;
+            font-size: 1rem;
+        }
+
+        /* --- 5. CHECKOUT & INFO --- */
+        .checkout-section {
+            background: linear-gradient(135deg, #111 0%, #222 100%);
+            color: #fff;
+            text-align: center;
+        }
+        
+        .checkout-section h2 {
+            color: #fff;
+        }
+        
+        .checkout-intro {
+            color: #ccc;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            text-align: left;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .checkout-box {
+            background: #222;
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            border: 1px dashed #d4af37;
+        }
+        
+        .checkout-box h3 {
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            text-transform: uppercase;
+        }
+        
+        .checkout-box p {
+            margin-bottom: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            line-height: 1.6;
+        }
+        
+        .checkout-box strong {
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        .checkout-note {
+            font-size: 0.85rem;
+            color: #aaa;
+            font-style: italic;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+        }
+        
+        .cta-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            section {
+                padding: 2.5rem 0;
+            }
+            
+            .hero {
+                padding: 4rem 0;
+                min-height: auto;
+            }
+            
+            h2 {
+                margin-bottom: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .pain-grid,
+            .services-grid,
+            .feedback-grid,
+            .checkout-grid {
+                gap: 1rem;
+            }
+            
+            .service-card.featured {
+                transform: scale(1);
+            }
+            
+            .service-card.featured:hover {
+                transform: translateY(-8px);
+            }
+            
+            .checkout-box {
+                border: 1px solid #d4af37;
+            }
+            
+            .btn-cta {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            html {
+                font-size: 14px;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero h1 {
+                margin-bottom: 1rem;
+            }
+            
+            .pain-grid,
+            .services-grid,
+            .feedback-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .feedback-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .checkout-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* --- PERFORMANCE OPTIMIZATIONS --- */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Lazy loading support */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Loading state */
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        /* Focus visible for keyboard navigation */
+        button:focus-visible,
+        a:focus-visible {
+            outline: 2px solid #d4af37;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <div class="container">
+            <h1>MENTOR LƯƠNG NHÂN ANH</h1>
+            <p>Giải Pháp Bứt Phá Doanh Số Toàn Diện & Đồng Hành 1-1 Cho Chủ Thương Hiệu Bền Vững.</p>
+            <p>Đừng để doanh nghiệp của bạn gồng lỗ hay dậm chân tại chỗ vì thiếu một tấm bản đồ chiến lược thực chiến.</p>
+            <a href="#register" class="btn-cta">Đăng ký tư vấn 1-1 miễn phí (30 Phút)</a>
+        </div>
+    </header>
+
+    <!-- 2. PAIN POINTS SECTION -->
+    <section class="pain-section">
+        <div class="container">
+            <h2>Đâu Là Vấn Đề Doanh Nghiệp Bạn Đang Gặp Phải?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>1. Đốt Tiền Cho Quảng Cáo</h3>
+                    <p>Chi phí Ads ngày càng tăng cao nhưng lượng tin nhắn đổ về "vắng lặng", khách hỏi giá xong im lặng bỏ đi.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>2. Vận Hành Theo Cảm Tính</h3>
+                    <p>Làm ngày nào biết ngày nấy, càng làm càng loạn. Không quy trình hệ thống, doanh số trồi sụt thất thường không rõ nguyên nhân.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>3. Đội Ngũ Nhân Sự Rời Rạc</h3>
+                    <p>Sản phẩm rất tốt nhưng nhân sự Marketing & Sales hoạt động thiếu gắn kết, không thể biến ý tưởng thành doanh thu.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>4. Thuê Ngoài Không Hiệu Quả</h3>
+                    <p>Từng tốn rất nhiều tiền thuê Agency, Freelancer hay đi học các khóa học vĩ mô nhưng về nhà vẫn không biết cách áp dụng thực tế.</p>
+                </div>
+            </div>
+            <div class="pain-quote">
+                <p>"Đôi khi một lời khuyên đúng thời điểm còn đắt giá hơn những gì bạn phải trả giá khi thất bại."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="services-section">
+        <div class="container">
+            <h2>4 Cấp Độ Triển Khai Dành Cho Doanh Nghiệp</h2>
+            <div class="services-grid">
+                <!-- Gói 1 -->
+                <div class="service-card">
+                    <h3>Trải Nghiệm<br>(Audit 1-1)</h3>
+                    <div class="service-price">1.000.000đ</div>
+                    <ul>
+                        <li>Thời lượng: 120 phút qua Zoom</li>
+                        <li>Bắt mạch hệ thống xử lý ngay nội tại nặng nhất</li>
+                        <li>Tặng File PDF Chiến lược tổng thể</li>
+                    </ul>
+                    <a href="#register" class="btn-cta">Chọn Gói Này</a>
+                </div>
+                <!-- Gói 2 - Featured -->
+                <div class="service-card featured">
+                    <h3>MASTER PLAN</h3>
+                    <div class="service-price">5.000.000đ</div>
+                    <ul>
+                        <li>Xây dựng lộ trình kinh doanh tổng thể</li>
+                        <li>Định hướng chi tiết trong 3 tháng tới</li>
+                        <li>Tặng cuốn sổ tay Chiến lược trị giá 500k</li>
+                    </ul>
+                    <a href="#register" class="btn-cta">Chọn Gói Này</a>
+                </div>
+                <!-- Gói 3 -->
+                <div class="service-card">
+                    <h3>ACTION PLAN</h3>
+                    <div class="service-price">10.000.000đ</div>
+                    <ul>
+                        <li>30 ngày cầm tay chỉ việc</li>
+                        <li>Xây dựng hệ thống Marketing & Bán hàng đột phá</li>
+                        <li>Hỗ trợ liên tục 24/7 qua Zalo</li>
+                    </ul>
+                    <a href="#register" class="btn-cta">Chọn Gói Này</a>
+                </div>
+                <!-- Gói 4 -->
+                <div class="service-card">
+                    <h3>SCALE UP</h3>
+                    <div class="service-price">15.000.000đ</div>
+                    <ul>
+                        <li>Nhân bản doanh thu, tăng trưởng thương hiệu</li>
+                        <li>Tối ưu quy trình và hệ thống vận hành nâng cao</li>
+                        <li>Hỗ trợ chiến lược sâu sát từ Mentor</li>
+                    </ul>
+                    <a href="#register" class="btn-cta">Chọn Gói Này</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FEEDBACK SECTION -->
+    <section class="feedback-section">
+        <div class="container">
+            <h2>Khách Hàng Nói Gì Về Chúng Tôi</h2>
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <p class="feedback-text">Trước cứ nghĩ chạy Ads là xong, gặp Nhân Anh mới biết mình đốt tiền ngu nhiều quá. Khám Brand xong mới thấy cái phễu của mình nhiều lỗi, sửa xong lại ra đơn khác hẳn!</p>
+                    <div class="feedback-author">— Anh Hoàng</div>
+                </div>
+                <div class="feedback-card">
+                    <p class="feedback-text">Học xong 10 buổi nghiệp vụ, nhân viên nhà mình chốt đơn mượt hơn hẳn. Không còn kiểu khách hỏi giá xong im lặng nữa, biết cách xử lý từ chối là doanh số tăng vọt.</p>
+                    <div class="feedback-author">— Chị Mai</div>
+                </div>
+                <div class="feedback-card">
+                    <p class="feedback-text">Khoái nhất cái bộ Black USB của em. Toàn mẫu kịch bản với template sẵn, chỉ việc lắp vào shop mình mà dùng, đỡ phải ngồi vắt óc nghĩ content mỗi ngày.</p>
+                    <div class="feedback-author">— Anh Tuấn</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CHECKOUT & REGISTER SECTION -->
+    <section class="checkout-section" id="register">
+        <div class="container">
+            <h2>ĐĂNG KÝ NHẬN CUỘC GỌI TƯ VẤN 1-1</h2>
+            <p class="checkout-intro">Vui lòng hoàn thành thông tin đăng ký hoặc chuyển khoản theo cú pháp bên dưới để được lên lịch hẹn sớm nhất.</p>
+            
+            <div class="checkout-grid">
+                <!-- Cột thông tin chương trình -->
+                <div class="checkout-box">
+                    <h3>Thông Tin Chương Trình Coach</h3>
+                    <p>• <strong>Thời lượng:</strong> 10 buổi coach & mentor chuyên sâu (120 phút/buổi)</p>
+                    <p>• <strong>Hình thức:</strong> Học Online qua Google Meeting / Zoom</p>
+                    <p>• <strong>Đặc quyền:</strong> Hỗ trợ thêm trong nhóm Zalo kín trong vòng 1 năm</p>
+                    <p>• <strong>Ưu đãi nhóm:</strong> Giảm 500.000đ/người khi đăng ký nhóm 2 người. Giảm 1.000.000đ/người cho nhóm từ 3-5 người.</p>
+                </div>
+
+                <!-- Cột thông tin thanh toán -->
+                <div class="checkout-box">
+                    <h3>THÔNG TIN THANH TOÁN</h3>
+                    <p>Chủ tài khoản: <strong>LƯƠNG NHÂN ANH</strong></p>
+                    <p>Ngân hàng: <strong>SACOMBANK</strong></p>
+                    <p>Số tài khoản: <strong>020097010872</strong></p>
+                    <p>Cú pháp chuyển khoản: <strong>Tên + SĐT</strong></p>
+                    <div class="checkout-note">* Chú ý: Vui lòng chuyển đúng số tiền. Chúng tôi sẽ liên hệ xác nhận lịch hẹn trong vòng 24 giờ kể từ khi nhận được thanh toán.</div>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="https://zalo.me/0983317762" class="btn-cta" target="_blank" rel="noopener noreferrer">Đặt Lịch Hẹn Ngay Qua Zalo</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Lazy loading support for images (if added in future)
+        if ('IntersectionObserver' in window) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            images.forEach(img => imageObserver.observe(img));
+        }
+        
+        // Add smooth scroll for CTA buttons
+        document.querySelectorAll('a[href="#register"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector('#register').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
